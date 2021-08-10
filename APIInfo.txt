@@ -1,0 +1,203 @@
+
+
+
+Current Weather Data		(WEATHER CURRENT)
+
+Access current weather data for any location including over 200,000 cities
+We collect and process weather data from different sources such as global and local 
+ models, satellites, radars and a vast network of weather stations
+                          
+               
+        				DONE    
+	    					longitude
+                				lattitude
+                				countryname
+                				city name
+               
+                				sunrise
+                				sunset
+                				main (WEATHER PARAMETER)   
+                				description
+                				weather icon
+
+               					 temp
+                				temp Min
+                				temmp max
+                
+						pressure
+                				humidity
+                				visibility
+              					  wind speed
+                				wind degree
+				                clouds *100%
+
+
+              Calendar calendar = Calendar.getInstance();
+              TimeZone tz = TimeZone.getDefault();
+              calendar.add(Calendar.MILLISECOND, tz.getOffset(calendar.getTimeInMillis()));
+              SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+              java.util.Date currenTimeZone=new java.util.Date((long)1379487711*1000);
+              Toast.makeText(TimeStampChkActivity.this, sdf.format(currenTimeZone), Toast.LENGTH_SHORT).show();
+                
+
+{
+  "coord": {
+    "lon": -122.08,
+    "lat": 37.39
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 282.55,
+    "feels_like": 281.86,
+    "temp_min": 280.37,
+    "temp_max": 284.26,
+    "pressure": 1023,
+    "humidity": 100
+  },
+  "visibility": 16093,
+  "wind": {
+    "speed": 1.5,
+    "deg": 350
+  },
+  "clouds": {
+    "all": 1
+  },
+  "dt": 1560350645,
+  "sys": {
+    "type": 1,
+    "id": 5122,
+    "message": 0.0139,
+    "country": "US",
+    "sunrise": 1560343627,
+    "sunset": 1560396563
+  },
+  "timezone": -25200,
+  "id": 420006353,
+  "name": "Mountain View",
+  "cod": 200
+  }                         
+
+                        
+
+
+
+
+
+
+Air Pollution API			(AIR POLUTION CURRENT FORCAST AND HISTORICAL)
+
+Current, forecast and historical air pollution data
+Forecast for 5 days ahead with 1-hour step
+Air Pollution API includes both Air Quality Index and indices for CO, NO, NO2, O3, SO2, NH3, PM2.5, PM10
+
+
+{
+  "coord":[
+    50,
+    50
+  ],
+  "list":[
+    {
+      "dt":1605182400,
+      "main":{
+        "aqi":1
+      },
+      "components":{
+        "co":201.94053649902344,
+        "no":0.01877197064459324,
+        "no2":0.7711350917816162,
+        "o3":68.66455078125,
+        "so2":0.6407499313354492,
+        "pm2_5":0.5,
+        "pm10":0.540438711643219,
+        "nh3":0.12369127571582794
+      }
+    }
+  ]
+} 
+
+{
+  "coord": [
+    50.0,
+    50.0
+  ],
+  "list": [
+    {
+      "dt": 1605916800,
+      "main": {
+        "aqi": 1.0
+      },
+      "components": {
+        "co": 211.954,
+        "no": 0.0,
+        "no2": 0.217,
+        "o3": 72.956,
+        "so2": 0.514,
+        "pm2_5": 2.563,
+        "pm10": 5.757,
+        "nh3": 0.216
+      }
+    },
+    {
+      "dt": 1605920400,
+      "main": {
+        "aqi": 1.0
+      },
+      "components": {
+        "co": 211.954,
+        "no": 0.0,
+        "no2": 0.201,
+        "o3": 72.241,
+        "so2": 0.469,
+        "pm2_5": 2.662,
+        "pm10": 5.622,
+        "nh3": 0.224
+      }
+    },
+    {
+      "dt": 1605924000,
+      "main": {
+        "aqi": 1.0
+      },
+      "components": {
+        "co": 213.623,
+        "no": 0.0,
+        "no2": 0.185,
+        "o3": 71.526,
+        "so2": 0.443,
+        "pm2_5": 2.724,
+        "pm10": 5.51,
+        "nh3": 0.23
+      }
+    },
+    {
+      "dt": 1605927600,
+      "main": {
+        "aqi": 1.0
+      },
+      "components": {
+        "co": 213.623,
+        "no": 0.0,
+        "no2": 0.17,
+        "o3": 72.241,
+        "so2": 0.432,
+        "pm2_5": 2.812,
+        "pm10": 5.687,
+        "nh3": 0.234
+      }
+    },
+    .....
+
+
+
+https://openweathermap.org/api
+
+

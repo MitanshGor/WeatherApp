@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="index.css"> 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+                <img class="heroImg" src="images/weatherCloud.png" >
+                <header>The Weather API</header>
+    </nav>
+
+    <section class="mainBody">
+        <form class="locationName" id="form" >
+            <input type="text" id="locationName" placeholder="Insert Location Name">
+            <!-- <input type="submit"> -->
+        </form>
+        <div class="invalid" id="invalid">
+            <img src="images/invalid.png" alt="invalid">
+            <p>Invalid Location Name</p>
+        </div>
+        <div class="heading" id="heading1" >
+            <h1 >Current Forcast</h1>
+        </div>
+        
+        <div class="Weather-data" id="weather">
+                <div class="mainData" id="Latitude">
+                    <div class="type">
+                        <p id="invalidP" class="typeName">Latitude</p>
+                        <img src="images/latitude.png">
+                    </div>
+                <div class="info">
+                    <div>
+                        <h4 class="typeName" >Latitude<h4>
+                        <p id="latitude"></p>
+                    </div>
+                    <div>
+                        <h4 class="typeName">Longitude<h4>
+                            <p  id="longitude"></p>
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="mainData" id="location">
+                    <div class="type">
+                        <p class="typeName">Location</p>
+                        <img src="images/location.png">
+                    </div>
+                <div class="info">
+                    <div>
+                        <h4 class="typeName" >Country<h4>
+                        <p id="country"></p>
+                    </div>
+                    <div>
+                        <h4 class="typeName" >City<h4>
+                            <p id="city"></p>
+                    </div>
+                </div>
+                </div>
+
+
+                <div class="mainData" id="sun">
+                    <div class="type">
+                        <p class="typeName">Sun Track</p>
+                        <img src="images/sun.png">
+                    </div>
+                <div class="info">
+                    <div>
+                        <h4 class="typeName" >Rise<h4>
+                        <p id="rise"></p>
+                    </div>
+                    <div>
+                        <h4 class="typeName">Set<h4>
+                            <p  id="set"></p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="mainData" id="Weather">
+                    <div class="type">
+                        <p class="typeName">Weather</p>
+                        <img id="icon" src="images/weather.png"/>
+                    </div>
+                <div class="info">
+                    <div>
+                        <h4 class="typeName" >Parameter<h4>
+                        <p id="parameter"></p>
+                    </div>
+                    <div>
+                        <h4 class="typeName" >Description<h4>
+                        <p id="desciption"></p>
+                    </div>
+                    
+
+                </div>
+                </div>
+
+                <div class="mainData" id="Temprature">
+                    <div class="type">
+                        <p class="typeName">Temprature</p>
+                        <img src="images/temprature.jpg">
+                    </div>
+                <div class="info">
+                    <div>
+                        <h4 class="typeName" >Min<h4>
+                        <p id="min"></p>
+                    </div>
+                    <div>
+                        <h4 class="typeName" >Current<h4>
+                            <p id="current"></p>
+                    </div>
+                    <div>
+                        <h4 class="typeName" >Max<h4>
+                            <p id="max"></p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="mainData" id="Atmosphere">
+                    <div class="type">
+                        <p class="typeName">Atmosphere</p>
+                        <img src="images/atmosphere.png">
+                    </div>
+                <div class="info">
+                    <div>
+                        <h4 class="typeName" >Pressure<h4>
+                        <p id="pressure"></p>
+                    </div>
+                    <div>
+                        <h4 class="typeName" >Visibility<h4>
+                            <p id="visibility"></p>
+                    </div>
+                    <div>
+                        <h4 class="typeName" >Humidity<h4>
+                            <p id="humidity"></p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="mainData" id="wind">
+                    <div class="type">
+                        <p class="typeName">Wind</p>
+                        <img src="images/wind.png">
+                    </div>
+                <div class="info">
+                    <div>
+                        <h4 class="typeName" >speed<h4>
+                        <p id="speed"></p>
+                    </div>
+                    <div>
+                        <h4 class="typeName" >Degree<h4>
+                            <p id="degree"></p>
+                    </div>
+                    <div>
+                        <h4 class="typeName" >Cloud %<h4>
+                            <p id="cloud"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="heading"  id="heading2"  >
+            <h1>Current Air Pollution</h1>
+        </div>
+        <div class="supper-pollution" id="pollution">
+                <div class="pollution-Data">
+                    <div class="mainData" id="Co">
+
+                        <div class="type">
+                            <p class="typeName">CO</p>
+                            <img src="images/co1.png">
+                        </div>
+                        <h1 id="CO"></h1>
+                    </div>
+                    <div class="mainData" id="no">
+                        <div class="type">
+                            <p class="typeName">NO</p>
+                            <img src="images/no.png">
+                        </div>
+                        <h1 id="NO"></h1>
+
+                    </div>
+                    <div class="mainData" id="no2">
+                        <div class="type">
+                            <p class="typeName">NO₂</p>
+                            <img src="images/no2.png">
+                        </div>
+                        <h1 id="NO2"></h1>
+
+                    </div>
+                    <div class="mainData" id="03">
+
+                        <div class="type">
+                            <p class="typeName">O₃</p>
+                            <img src="images/o3.png">
+                        </div>
+                        <h1 id="O3"></h1>
+                    </div>
+                    <div class="mainData" id="so2">
+                        <div class="type">
+                            <p class="typeName">SO₂</p>
+                            <img src="images/so2.png">
+                        </div>
+                        <h1 id="SO2"></h1>
+
+                    </div>
+                    <div class="mainData" id="pm2_5">
+
+                        <div class="type">
+                            <p class="typeName">PM₂.₅</p>
+                            <img src="images/pm2_5.png">
+                        </div>
+                        <h1 id="PM25"></h1>
+                    </div>
+                    <div class="mainData" id="pm10">
+
+                        <div class="type">
+                            <p class="typeName">PM₁₀</p>
+                            <img src="images/PM10.jpg">
+                        </div>
+                        <h1 id="PM10"></h1>
+                    </div>
+                    <div class="mainData" id="nh3">
+                        <div class="type">
+                            <p class="typeName">NH₃</p>
+                            <img src="images/nh3.png">
+                        </div>
+                        <h1 id="NH3"></h1>
+
+                    </div>
+                </div>
+        </div>
+        
+        <div class=" heading-alert"  id="heading3" >
+            <h1>Alerts !!!</h1>
+        </div>
+        <div class="alerts" id="alerts">
+            <div class="type">
+                <h1 class="typeName">Alert Sender</h1>
+                <p id="Name"></p>
+            </div>
+            <div class="type">
+                <h1 class="typeName">Event</h1>
+                <p id="Event"></p>
+            </div>
+            
+            <div class="type">
+                <h1 class="typeName">Start Date</h1>
+                <p id="startDate"></p>
+            </div>
+            <div class="type">
+                <h1 class="typeName">End  Date</h1>
+                    <p id="endDate"></p>
+                </div>
+            <div class="type">
+                <h1 class="typeName">Description</h1>
+                <p id="Description"></p>
+            </div>
+            
+        </div>
+    </section>
+    <footer>
+                <ul class="footer-social" >        
+                   <li><a href="#"><i  class="fa fa-facebook fa-2x"></i></a></li>
+                   <li><a href="#"><i  class="fa fa-envelope fa-2x"></i></a></li>
+                   <li><a href="#"><i class="fa fa-mobile fa-2x"></i></a></li>
+                   <li><a href="#"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                   <li><a href="#"><i class="fa fa-github fa-2x"></i></a></li>
+              </ul>   
+            <div class="copyright">
+                <br>
+                <span>&#169; Mitansh 2021.</span> 
+                <span><br>Design with ❤️ by<br><a href="#"> Mitansh Gor</a></span>	         	
+                </div>	           
+  </footer>  
+<script src="index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<link rel="stylesheet" href="index.css"> 
+
+</body>
+</html>
